@@ -1,16 +1,22 @@
 // ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables
 
 import 'package:flutter/material.dart';
+import 'package:fruit_flower_bird_index/app/models/fruit.dart';
 
-class DetailsView extends StatelessWidget {
-  const DetailsView({Key? key}) : super(key: key);
+class FruitsDetailsView extends StatelessWidget {
+  const FruitsDetailsView({
+    Key? key,
+    required this.fruit,
+  }) : super(key: key);
+
+  final Fruit fruit;
 
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
     return Scaffold(
       appBar: AppBar(
-        title: Text('data'),
+        title: Text('${fruit.nameBangla}'),
         centerTitle: true,
         elevation: 0,
       ),
@@ -29,9 +35,12 @@ class DetailsView extends StatelessWidget {
                     height: size.width / 1.5,
                     width: size.width - 20,
                     decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(15),
-                      color: Colors.blue,
-                    ),
+                        borderRadius: BorderRadius.circular(15),
+                        color: Colors.blue,
+                        image: DecorationImage(
+                          image: AssetImage(fruit.image ?? ''),
+                          fit: BoxFit.cover,
+                        )),
                   ),
                 ),
               ),
@@ -51,7 +60,7 @@ class DetailsView extends StatelessWidget {
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
                             Text(
-                              'পাখির নাম',
+                              '${fruit.nameBangla}',
                               style: TextStyle(
                                 color: Colors.teal,
                                 fontSize: 30,
@@ -96,7 +105,7 @@ class DetailsView extends StatelessWidget {
                                 Padding(
                                   padding: const EdgeInsets.all(8.0),
                                   child: Text(
-                                    'টিয়া',
+                                    '${fruit.nameBangla}',
                                     style: TextStyle(
                                       fontSize: 15,
                                       color: Color(0xFF525252),
@@ -121,7 +130,7 @@ class DetailsView extends StatelessWidget {
                                 Padding(
                                   padding: const EdgeInsets.all(8.0),
                                   child: Text(
-                                    'Parrot',
+                                    '${fruit.nameEnglish}',
                                     style: TextStyle(
                                       fontSize: 15,
                                       color: Color(0xFF525252),
@@ -146,7 +155,7 @@ class DetailsView extends StatelessWidget {
                                 Padding(
                                   padding: const EdgeInsets.all(8.0),
                                   child: Text(
-                                    'বাংলাদেশে সহজেই দেখতে পাওয়া যায়।',
+                                    '${fruit.description}',
                                     style: TextStyle(
                                       fontSize: 15,
                                       color: Color(0xFF525252),

@@ -6,6 +6,7 @@ import 'package:get/get.dart';
 
 class BirdListController extends GetxController {
   var birds = <Bird>[].obs;
+
   DataList _dataList = DataList();
 
   getBirds() {
