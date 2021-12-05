@@ -1,7 +1,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.fruit_flower_bird_index">
    <application
-        android:label="fruit_flower_bird_index"
+        android:label="বাংলাদেশের পাখি, ফুল ও ফলের তথ্য"
         android:icon="@mipmap/ic_launcher">
         <activity
             android:name=".MainActivity"

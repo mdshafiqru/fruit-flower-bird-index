@@ -1,12 +1,9 @@
-// ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables, must_be_immutable
+// ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables, must_be_immutable, unused_local_variable
 
 import 'package:flutter/material.dart';
-import 'package:fruit_flower_bird_index/app/controllers/bird_list_controller.dart';
 import 'package:fruit_flower_bird_index/app/controllers/flower_list_controller.dart';
 import 'package:fruit_flower_bird_index/app/data/constant/app_strings.dart';
-import 'package:fruit_flower_bird_index/app/models/bird.dart';
 import 'package:fruit_flower_bird_index/app/models/flower.dart';
-import 'package:fruit_flower_bird_index/app/views/details/bird_details.dart';
 import 'package:fruit_flower_bird_index/app/views/details/flower_details.dart';
 import 'package:fruit_flower_bird_index/app/views/drawer/custom_drawer.dart';
 import 'package:get/get.dart';
@@ -137,7 +134,7 @@ class FlowerList extends StatelessWidget {
           child: Column(
             children: [
               const SizedBox(height: 10),
-              searchBox,
+              // searchBox,
               cardList,
             ],
           ),

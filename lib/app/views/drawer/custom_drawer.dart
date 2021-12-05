@@ -3,8 +3,6 @@ import 'package:flutter/material.dart';
 import 'package:fruit_flower_bird_index/app/controllers/custom_drawer_controller.dart';
 import 'package:fruit_flower_bird_index/app/data/constant/app_strings.dart';
 import 'package:fruit_flower_bird_index/app/data/enum/custom_drawer_section.dart';
-import 'package:fruit_flower_bird_index/app/views/about-us/about_us_view.dart';
-import 'package:fruit_flower_bird_index/app/views/contact-us/contact_us_view.dart';
 import 'package:fruit_flower_bird_index/app/views/drawer/drawer_header.dart';
 import 'package:fruit_flower_bird_index/app/views/home/home_view.dart';
 import 'package:fruit_flower_bird_index/app/views/list/bird_list.dart';
@@ -65,20 +63,6 @@ Widget myDrawerList(BuildContext context, CustomDrawerController controller) {
           context,
           controller,
         ),
-        menuItem(
-          5,
-          ABOUT_US,
-          // Icons.home,
-          context,
-          controller,
-        ),
-        menuItem(
-          6,
-          CONTACT_US,
-          // Icons.home,
-          context,
-          controller,
-        ),
       ],
     ),
   );
@@ -116,14 +100,6 @@ Widget menuItem(
             controller.currentPage.value = DrawerSections.FRUITS;
             Get.to(() => FruitList());
 
-            break;
-          case 5:
-            controller.currentPage.value = DrawerSections.ABOUT_US;
-            Get.to(() => AboutUsView());
-            break;
-          case 6:
-            controller.currentPage.value = DrawerSections.CONTACT_US;
-            Get.to(() => ContactUsView());
             break;
 
           default:

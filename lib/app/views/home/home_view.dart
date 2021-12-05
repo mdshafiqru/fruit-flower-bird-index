@@ -29,6 +29,12 @@ class HomeView extends StatelessWidget {
               child: Column(
                 children: const [
                   IndexCard(
+                    image: BirdCardImage,
+                    nameBangla: 'পাখি',
+                    nameEnglish: 'Birds',
+                    listName: BirdString,
+                  ),
+                  IndexCard(
                     image: FlowerCardImage,
                     nameBangla: 'ফুল',
                     nameEnglish: 'Flowers',
@@ -39,12 +45,6 @@ class HomeView extends StatelessWidget {
                     nameBangla: 'ফল',
                     nameEnglish: 'Fruits',
                     listName: FruitString,
-                  ),
-                  IndexCard(
-                    image: BirdCardImage,
-                    nameBangla: 'পাখি',
-                    nameEnglish: 'Birds',
-                    listName: BirdString,
                   ),
                 ],
               ),

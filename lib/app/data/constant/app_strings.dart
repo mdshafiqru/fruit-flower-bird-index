@@ -1,6 +1,6 @@
 // ignore_for_file: constant_identifier_names
 
-const String AppName = 'বাংলাদেশের ফুল, ফল ও পাখির তথ্য';
+const String AppName = 'বাংলাদেশের পাখি, ফুল, ফলের তথ্য';
 const String BirdCardImage = 'assets/images/sample/bird.jpg';
 const String FruitCardImage = 'assets/images/sample/fruit.jpg';
 const String FlowerCardImage = 'assets/images/sample/flower.jpg';
